@@ -2,11 +2,11 @@
 
 // design the grid into the board
 function createGrid() {
-    let board = document.querySelector('#board');
-
+    let board = document.getElementById('#board');
+    
     board.style.gridTemplateColumns = `repeat(4, 1fr)`;
     board.style.gridTemplateRows = `repeat(4, 1fr)`;
-    board.style = 'display:flex border: 1px solid black; padding: 10px;';
+    board.style = 'border: 1px solid black; padding: 10px;';
 
     // create 4 squares
     // add event listeners to each square
@@ -22,7 +22,8 @@ function createGrid() {
         board.appendChild(square);
     };
 };
+createGrid();
 
-document.addEventListener('DOMContentLoaded', function() {
-    createGrid();
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     createGrid();
+// });
